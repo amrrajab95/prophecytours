@@ -1,0 +1,41 @@
+.wrapper {
+    background-color: var(--background-color);
+    padding: 55px 0;
+}
+
+.title {
+    color: var(--main-color-2);
+    margin-bottom: 25px;
+    font-family: var(--font-medium);
+    text-align: center;
+    font-size: 32px;
+
+}
+
+.s_1, .s_2 {
+    display: flex;
+    margin: 0 -15px;
+    align-items: center;
+}
+
+.s_1 > div, .s_2 > div {
+    padding: 0 15px;
+    width: 50%;
+    border-radius: 15px;
+
+}
+
+.s_2 {
+    margin-top: 25px;
+    color: var(--main-color);
+    font-size: 18px;
+}
+
+.s_2_title {
+    font-size: 22px;
+    font-family: var(--font-bold);
+}
+
+.btn_wrapper {
+    margin-top: 25px;
+}

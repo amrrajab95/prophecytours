@@ -1,0 +1,46 @@
+.wrapper {
+    background-color: #F1F1F1;
+    padding: 35px 0;
+    color: var(--main-color);
+}
+
+.wrapper > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 600;
+    width: 370px;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 18px;
+}
+
+.input_wrapper {
+    margin-bottom: 25px;
+    margin-top: 35px;
+}
+
+.input_wrapper input {
+    border: none;
+    border-bottom: 1px solid var(--main-color-2);
+    background-color: transparent;
+    height: 40px;
+    width: 100%;
+    outline: none;
+    padding: 0 10px;
+    font-size: 18px;
+    color: var(--main-color-2);
+
+}
+
+.input_wrapper input::placeholder {
+    color: #B3B3B3;
+    font-size: 16px;
+
+}

@@ -1,0 +1,16 @@
+.wrapper {
+    padding: 55px 0;
+
+}
+
+.content > div {
+    width: calc(100% / 3);
+    padding: 0 15px;
+
+}
+
+.content {
+    display: flex;
+    margin: 0 -15px;
+}
+

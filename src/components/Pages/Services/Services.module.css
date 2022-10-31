@@ -1,0 +1,20 @@
+.wrapper {
+padding: 55px 0;
+}
+
+.page_title {
+    color: var(--main-color-2);
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 25px;
+
+}
+
+.page_description {
+    color: var(--main-color);
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}

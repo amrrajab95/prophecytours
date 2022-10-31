@@ -1,0 +1,28 @@
+.item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.wrapper {
+height: 100%;
+color: var(--main-color);
+
+}
+.inner_wrapper {
+    padding: 25px 15px;
+    border-radius: 15px;
+    height: 100%;
+    background-color: #ffffff;
+
+}
+
+.title {
+    color: var(--main-color);
+    margin-left: 10px;
+}
+.wrap_title{
+    font-family: var(--font-medium);
+    font-size: 25px;
+    margin-bottom: 15px;
+}

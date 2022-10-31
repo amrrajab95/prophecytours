@@ -1,0 +1,21 @@
+.wrapper {
+
+}
+
+.item_wrapper {
+    padding: 45px 65px;
+    text-align: center;
+    color: var(--main-color);
+    font-size: 18px;
+}
+
+.item_title {
+    color: var(--main-color-2);
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.item_wrapper:nth-child(odd){
+    background-color: var(--background-color-2);
+}

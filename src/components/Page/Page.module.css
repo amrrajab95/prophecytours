@@ -1,0 +1,37 @@
+.page_header {
+    position: relative;
+    text-align: center;
+    height: 400px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page_header:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--main-color-trans);
+}
+
+.page_header >div {
+    z-index: 222;
+    position: relative;
+    width: 100%;
+}
+
+.page_title {
+    font-size: 45px;
+}
+.sub_title {
+    font-size: 22px;
+    width: 800px !important;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 15px;
+    line-height: 1.6;
+}

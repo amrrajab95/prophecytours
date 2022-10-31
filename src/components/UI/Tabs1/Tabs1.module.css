@@ -1,0 +1,39 @@
+.wrapper {
+    background-color: var(--main-color-2);
+}
+
+.wrapper > div a {
+    display: block;
+    padding: 40px 15px;
+    font-size: 18px;
+}
+
+.wrapper ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.wrapper ul a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.wrapper ul li {
+   border-right:1px solid #ffffff57;
+}
+
+.wrapper ul li:first-child a{
+    padding-left: 0;
+
+}
+.wrapper ul li:last-child a {
+    padding-right: 0;
+
+}
+.wrapper ul li:last-child  {
+    border-right:none;
+
+}

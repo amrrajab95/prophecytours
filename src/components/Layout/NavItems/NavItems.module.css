@@ -1,0 +1,39 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    list-style: none;
+
+}
+
+.wrapper a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: var(--default-transaction);
+    position: relative;
+}
+
+.wrapper a:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom:-4px ;
+    height: 1px;
+    width: 0;
+    transition: var(--default-transaction);
+    background-color: var(--main-color-2);
+}
+
+.wrapper a:hover {
+    color: var(--main-color-2);
+    transition: var(--default-transaction);
+}
+
+.wrapper a:hover:after {
+    width: 100%;
+    transition: var(--default-transaction);
+}
+
+.wrapper li + li {
+    margin-left: 40px;
+}

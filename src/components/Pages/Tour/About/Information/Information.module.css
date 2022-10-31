@@ -1,0 +1,40 @@
+.wrapper {
+    padding: 25px;
+    background-color: #ffffff12;
+    border-radius: 15px;
+}
+
+.content {
+    font-size: 17px;
+    color: #ffffff;
+}
+
+.title {
+    font-size: 22px;
+    font-family: var(--font-bold);
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+.btn_wrapper{
+    display: flex;
+    align-content: space-between;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.wrapper li {
+    position: relative;
+    padding-left: 15px;
+}
+
+.wrapper li:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: var(--main-color-2);
+    top: 50%;
+    transform: translateX(-50%);
+}

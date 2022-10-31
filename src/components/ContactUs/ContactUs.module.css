@@ -1,0 +1,22 @@
+.wrapper {
+    padding: 55px 0;
+    color: var(--main-color);
+    text-align: center;
+    padding-top: 35px;
+}
+
+.title {
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 22px;
+    width: 650px;
+
+}
+.description {
+    margin: 0 auto;
+    font-size: 20px;
+    margin-top: 25px;
+    width: 700px;
+    line-height: 1.5;
+
+}

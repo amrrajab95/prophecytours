@@ -1,0 +1,67 @@
+.label_day {
+    background-image: url("../../../../media/images/day_i.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+}
+
+.wrapper {
+    width: calc(100% / 4);
+    height: 292.2px;
+    color: var(--main-color);
+    cursor: pointer;
+    background-color: var(--background-color);
+
+}
+
+.wrapper:nth-child(1) {
+    background-color: var(--main-color);
+    color: #ffffff;
+}
+
+.wrapper:nth-child(3) {
+    background-color: var(--main-color);
+    color: #ffffff;
+}
+
+.wrapper:nth-child(6) {
+    background-color: var(--main-color);
+    color: #ffffff;
+}
+
+.wrapper:nth-child(8) {
+    background-color: var(--main-color);
+    color: #ffffff;
+}
+
+.wrapper:nth-child(9) {
+    background-color: var(--main-color);
+    color: #ffffff;
+}
+
+.wrapper:nth-child(11) {
+    background-color: var(--main-color);
+    color: #ffffff;
+}
+
+
+.label {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 45px;
+    margin-bottom: 15px;
+}
+
+.label_day {
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.title{
+    text-align: center;
+    margin-top: 15px;
+}

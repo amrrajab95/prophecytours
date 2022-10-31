@@ -1,0 +1,72 @@
+.btn a,.btn button {
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.stroke a,.stroke button {
+    color: var(--main-color-2);
+    transition: var(--default-transaction);
+
+
+}
+
+.stroke a:hover,.stroke button:hover {
+    color: var(--main-color-2);
+    transition: var(--default-transaction);
+
+
+}
+
+.fill a ,.fill button {
+    color: #ffffff;
+    background-color: var(--main-color-2);
+    transition: var(--default-transaction);
+}
+
+.fill a:hover ,.fill button:hover {
+    color: #ffffff;
+    background-color: var(--main-color);
+    transition: var(--default-transaction);
+}
+
+
+.primary a ,.primary button {
+    border: 1px solid var(--main-color-2);
+
+}
+
+.primary a:hover ,.primary button:hover {
+    border: 1px solid var(--main-color-2);
+    background-color: var(--main-color-2);
+    color: #ffffff;
+
+}
+
+.secondary a,.secondary button {
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    transition: var(--default-transaction);
+}
+
+.secondary a:hover,.secondary button:hover {
+    color: #ffffff;
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    transition: var(--default-transaction);
+}
+
+.fill.secondary  a,.fill.secondary  button {
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+
+.fill.secondary  a:hover,.fill.secondary  button:hover {
+  transition: var(--default-transaction);
+    background-color: var(--main-color-2);
+    color: #ffffff;
+    border:1px solid  var(--main-color-2);
+}

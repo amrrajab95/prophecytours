@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'mavenProRegular';
+    src: local('mavenProRegular'), url(./media/fonts/MavenPro-Regular.ttf) format('ttf');
+}
+
+@font-face {
+    font-family: 'mavenProMedium';
+    src: local('mavenProMedium'), url(./media/fonts/MavenPro-Medium.ttf) format('ttf');
+}
+
+@font-face {
+    font-family: 'mavenProBold';
+    src: local('mavenProBold'), url(./media/fonts/MavenPro-Bold.ttf) format('ttf');
+}
+
+@font-face {
+    font-family: 'justusBold';
+    src: local('justusBold'), url(./media/fonts/Justus-Bold.ttf) format('ttf');
+}
+
+:root {
+    --main-color: #0D2637;
+    --main-color-trans: rgba(13, 38, 55, 0.7);
+    --main-color-2: #998543;
+    --background-color: #EEF0F1;
+    --background-color-2: #E6E6E6;
+    --container-width: 1170px;
+    --container-edge: 15px;
+    --font-regular: mavenProRegular;
+    --font-medium: mavenProMedium;
+    --font-bold: mavenProBold;
+    --default-transaction: all 0.2s linear;
+}
+
+body {
+    margin: 0;
+    font-family: Maven Pro;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+    width: var(--container-width);
+    padding: 0 var(--container-edge);
+    margin: 0 auto;
+}
+
+.carousel .carousel-status {
+    display: none;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+.btns a {
+    display: block;
+}
+
+.btns > div + div {
+    margin-left: 15px;
+}
+
+.page_title {
+    font-size: 25px;
+    color: var(--main-color-2);
+    padding-bottom: 25px;
+    font-weight: var(--font-medium);
+}
+
+.page_header {
+
+}
+
+.row {
+    display: flex;
+    margin: 0 -15px;
+    flex-wrap: wrap;
+    margin-bottom: -30px;
+}
+
+.col-3 {
+    width: calc(100% / 3);
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+.col-2 {
+    width: calc(100% / 2);
+    padding: 0 20px;
+    margin-bottom: 30px;
+}
+.nav_links a.active {
+    color: var(--main-color-2) !important;
+
+}
+.nav_links a.active:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom:-4px ;
+    height: 1px;
+    width: 100% !important;
+    transition: var(--default-transaction);
+    background-color: var(--main-color-2);
+
+}

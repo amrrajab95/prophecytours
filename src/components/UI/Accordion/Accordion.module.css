@@ -1,0 +1,29 @@
+.wrapper{
+    margin-bottom: 15px;
+}
+.title_wrapper {
+    border-radius: 15px;
+    padding: 15px;
+    border: 1px solid var(--main-color-2);
+    color: var(--main-color);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.title {
+    padding-left: 15px;
+    font-size: 18px;
+}
+
+.content {
+    padding: 15px;
+    background-color: var(--background-color);
+    display: none;
+    border-radius: 15px;
+    margin-top: 7px;
+}
+
+.active {
+    display: block;
+}

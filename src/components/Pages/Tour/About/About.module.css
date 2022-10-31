@@ -1,0 +1,15 @@
+.wrapper {
+    background-color: var(--main-color);
+    padding: 35px 65px;
+}
+.wrapper >div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.s_1 {
+    width: 600px;
+    font-size: 20px;
+    color: #fff;
+    line-height: 1.6;
+}
