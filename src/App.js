@@ -13,8 +13,12 @@ import {useSelector, useDispatch} from "react-redux";
 import Modal from "./components/UI/Modal/Modal";
 import * as contactActions from "./store/actions/contactAction"
 import ContactUsForm from "./components/ContactUsForm/ContactUsForm";
+import {useEffect} from "react";
 
 function App() {
+    useEffect(()=>{
+       dispatch(contactActions.getAddress())
+    },[])
     const dispatch = useDispatch();
     const contactShow = useSelector((state) => state.contactSate.show);
     const _routes = <Routes>

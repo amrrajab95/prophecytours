@@ -12,8 +12,10 @@ const Contact = (props) => {
         <div>
             <Page page_title="Let's talk" sub_title="Contact">
                 <ContactItems/>
+                <div>
+                    <Map/>
+                </div>
 
-                <Map/>
 
             </Page>
         </div>

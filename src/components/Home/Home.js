@@ -18,13 +18,14 @@ import * as homeActions from "../../store/actions/homeActions"
 import * as actions from "../../store/actions/contactAction";
 import {useDispatch,useSelector} from "react-redux";
 import parse from 'html-react-parser';
+import {getBlock1} from "../../store/actions/homeActions";
 const Homepage = (props) => {
     const dispatch = useDispatch();
     const data =useSelector((state)=>state.homepage);
     useEffect(()=>{
         dispatch(homeActions.getMainBannerItems());
+        dispatch(homeActions.getBlock1());
     },[])
-    console.log(data);
     const sliderData =data.main_slider_items.map((_item)=>(
         {
             title:parse(_item.title),
@@ -47,6 +48,8 @@ const Homepage = (props) => {
 
     )
     );
+    // title: parse(data.block1.title),
+    //     description:  parse(data.block1.description),
     const contactUsData = {
         title: "EXPENSES FOR PASSPORTS OR ANY ADDITIONAL DOCUMENTS THAT MAY BE REQUIRED",
         description: "Passports must be valid after 6 months of return date. Personal articles Laundry, other beverages (wines, liquors, mineral water, tea, coffee, etc.) and food that are not on the menus of your included meal package, and any additional luggage.",

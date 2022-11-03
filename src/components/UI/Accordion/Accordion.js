@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./Accordion.module.css"
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-
+import parse from "html-react-parser";
 const Accordion = (props) => {
     const classesArr=[classes.content];
     if(props.active){
@@ -16,7 +16,7 @@ const Accordion = (props) => {
                 </div>
             </div>
                 <div className={classesArr.join(" ")}>
-                {props.content}
+                {parse(props.content)}
             </div>
         </div>
     )

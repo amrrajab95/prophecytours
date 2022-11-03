@@ -1,9 +1,10 @@
 import React from "react";
 import classes from "./Contact.module.css";
 import Button from "../../UI/Button/Button";
-
-
+import {useDispatch} from "react-redux";
+import * as contactActions from "../../../store/actions/contactAction"
 const Contact =(props)=>{
+    const dispatch = useDispatch();
         const data={
             title:"Your life-changing journey of Israel begins here.\n",
             content:"Serving churches and Christian ministries from around the world with the finest travel agents. If you are a tour agent, tour leader, pastors, or a visitor looking for a trusted partner in Israel. Please contact us today for more information on how we can serve you."
@@ -19,7 +20,7 @@ const Contact =(props)=>{
                     {data.content}
                 </div>
                 <div className={classes.btn_wrapper}>
-                    <Button title="Contact Us"  type="fill" color="primary" isButton={true}/>
+                    <Button title="Contact Us"  type="fill" color="primary" isButton={true} clicked={()=>dispatch(contactActions.show())}/>
                 </div>
             </div>
 

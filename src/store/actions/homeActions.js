@@ -3,7 +3,6 @@ import apis from "../../baseAxios";
 export const getMainBannerItems = () => {
     return((dispatch)=>(
         apis.get("/banners").then((res)=>{
-            console.log('ss');
             dispatch(getMainBannerItemsSuccess(res.data));
         })
     ))
@@ -11,8 +10,27 @@ export const getMainBannerItems = () => {
 
     
 }
+export const getBlock1 = () => {
+    return((dispatch)=>(
+        apis.get("/homeBlock1").then((res)=>{
+            dispatch(getBlock1Success(res.data));
+        })
+    ))
+
+
+
+}
+const getBlock1Success = (data) => {
+    return(
+        {
+            type:actionTypes.GET_BLOCK1,
+            data:data
+        }
+    )
+
+
+}
 const getMainBannerItemsSuccess = (data) => {
-    console.log('ss');
     return(
         {
             type:actionTypes.GET_MAIN_SLIDER_ITEMS,

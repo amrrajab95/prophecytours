@@ -2,17 +2,19 @@ import React, {useState} from "react";
 import classes from "./ContactUsForm.module.css"
 import {updateObject, checkValidity} from "../../utility"
 import Input from "../UI/Input/Input";
-import {useDispatch} from "react-redux";
+import {useDispatch,useSelector} from "react-redux";
 import Button from "../UI/Button/Button"
 import * as actions from "../../store/actions/contactAction";
-
+import {sendContact} from "../../store/actions/contactAction";
 const ContactUsForm = (props) => {
     const dispatch = useDispatch();
+    const formState = useSelector((state)=>state.contactSate)
     const [show, setShow] = React.useState(0);
     const [step, setStep] = useState(1);
     const nextStep = () => {
         setStep((current) => current + 1)
     }
+
     const prvStep = () => {
         setStep((current) => current - 1)
     }
@@ -178,9 +180,7 @@ const ContactUsForm = (props) => {
                     title: "Send",
                     type: "fill",
                     color: "primary",
-                    clicked: () => {
-                        nextStep()
-                    },
+                    clicked: null,
                 },
                 {
                     title: "Back",
@@ -192,7 +192,21 @@ const ContactUsForm = (props) => {
         },
 
     ]
-    const [form, setForm] = useState(initialForm)
+    const [form, setForm] = useState(initialForm);
+    const sendRequest=()=>{
+        const formsInputsValues={};
+        form.map((_row)=>{
+            Object.keys(_row.inputs).map((_el)=>{
+                if(_el==="mobile"){
+                    formsInputsValues[_el]=_row.inputs["country_code"].value+_row.inputs[_el].value
+                }else{
+                    formsInputsValues[_el]=_row.inputs[_el].value
+                }
+
+            })
+        });
+        dispatch(actions.sendContact(formsInputsValues));
+    }
 
     const onChangedHandler = (event, element) => {
         // console.log(element);
@@ -255,7 +269,7 @@ const ContactUsForm = (props) => {
                         {form[step - 1].btns.map((_item) => (
                             <Button onClick={(e) => {
                                 e.preventDefault();
-                                _item.clicked()
+                                _item.clicked? _item.clicked(): sendRequest();
                             }} title={_item.title} type={_item.type} color={_item.color} isButton={true}/>
                         ))}
                     </div>
@@ -264,6 +278,28 @@ const ContactUsForm = (props) => {
             </form>
         </div>
     );
+    if(formState.success){
+
+
+        htmlForm= <div className={classes.wrapper}>
+            <div className={classes.form_header}>
+                <h4 className={classes.form_header_title}>    your Message Sent Successfully!</h4>
+            </div>
+
+                <div className={classes.footer} style={{marginTop:"15px",justifyContent:"center"}}>
+                    <div className={classes.btns1}>
+                        <Button onClick={(e) => {
+                            e.preventDefault();
+                            dispatch(actions.hide())
+                        }} title="cancel" type="stroke" color="primary" isButton={true}/>
+                    </div>
+
+                </div>
+
+        </div>
+
+
+    }
 
 
     return (

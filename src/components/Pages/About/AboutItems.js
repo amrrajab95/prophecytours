@@ -1,6 +1,6 @@
 import React from "react";
 import classes from  "./About.module.css"
-
+import parse from "html-react-parser";
 const AboutItems =({items})=>{
 
     const _jsx_items=items.map((_item)=>{
@@ -11,7 +11,7 @@ const AboutItems =({items})=>{
                         {_item.title}
                     </div>
                     <div className={classes.content}>
-                        {_item.content}
+                        {parse(_item.content)}
                     </div>
                 </div>
 

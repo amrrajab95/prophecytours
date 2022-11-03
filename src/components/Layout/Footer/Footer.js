@@ -4,7 +4,11 @@ import logoImg from "../../../media/images/logo.png"
 import Social from "./Social/Social"
 import ContactUs from "./ContactUs/ContactUs"
 import Newsletter from "../../Newsletter/Newsletter";
-const footer = (props) => {
+import parse from "html-react-parser";
+import {useSelector} from "react-redux";
+
+const Footer = (props) => {
+    const addressData =useSelector((state)=>state.contactSate.contactAddress)
 
     return (
         <React.Fragment>
@@ -14,16 +18,18 @@ const footer = (props) => {
                     <div className={classes.content}>
                         <img className={classes.logo} src={logoImg} alt=""/>
                         <ContactUs title="Contact Us" data={[
-                            {label: "Email: ", value: "contact@lastoria.com"},
-                            {label: "Tel: ", value: "+972 (2) 533-8000"},
+                            {label: "Email: ", value: addressData.length ?parse(addressData[0].content):""},
+                            {label: "Tel: ", value:addressData.length ?parse(addressData[1].content):"" },
 
                         ]}/>
-                        <ContactUs title="Postal Address" data={[
-                            { value: "8 HaHoshen st."},
-                            { value: "Mevasseret Zion"},
-                            { value: "9079560, Israel"},
-
-                        ]}/>
+                        <div className={classes.addr}>
+                            <div className={classes.addr_title}>
+                            Postal Address
+                            </div>
+                            <div>
+                                {addressData.length?parse(addressData[4].content):""}
+                            </div>
+                        </div>
                         <Social/>
                     </div>
                 </div>
@@ -35,4 +41,4 @@ const footer = (props) => {
 
 }
 
-export default footer;
+export default Footer;

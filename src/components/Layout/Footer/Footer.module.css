@@ -16,3 +16,13 @@
 .logo {
     margin-bottom: 45px;
 }
+
+.addr {
+    color: #ffffff;
+}
+.addr_title{
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
