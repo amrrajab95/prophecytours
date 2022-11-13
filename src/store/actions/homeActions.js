@@ -6,9 +6,6 @@ export const getMainBannerItems = () => {
             dispatch(getMainBannerItemsSuccess(res.data));
         })
     ))
-
-
-    
 }
 export const getBlock1 = () => {
     return((dispatch)=>(
